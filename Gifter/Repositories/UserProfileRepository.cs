@@ -7,7 +7,7 @@ using Gifter.Utils;
 
 namespace Gifter.Repositories
 {
-    public class UserProfileRepository : BaseRepository, IPostRepository
+    public class UserProfileRepository : BaseRepository, IUserProfileRepository
     {
         public UserProfileRepository(IConfiguration configuration) : base(configuration) { }
 
@@ -43,7 +43,7 @@ namespace Gifter.Repositories
                 }
             }
         }
-        
+
 
         public UserProfile GetById(int id)
         {
@@ -81,7 +81,7 @@ namespace Gifter.Repositories
                 }
             }
         }
-        
+
 
         public void Add(UserProfile userProfile)
         {
