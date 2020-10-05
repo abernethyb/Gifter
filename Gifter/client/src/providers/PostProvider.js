@@ -6,7 +6,7 @@ export const PostProvider = (props) => {
     const [posts, setPosts] = useState([]);
 
     const getAllPosts = (search) => {
-        return fetch(`/api/post/search?q=${search}`)
+        return fetch(`/api/post/SearchWithComments?q=${search}`)
             .then((res) => res.json())
             .then(setPosts);
     };
