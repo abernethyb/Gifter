@@ -51,9 +51,9 @@ namespace Gifter.Controllers
         }
 
         [HttpGet("search")]
-        public IActionResult Search(string q, string r, bool sortDesc)
+        public IActionResult Search(string q, bool sortDesc)
         {
-            return Ok(_postRepository.Search(q, r, sortDesc));
+            return Ok(_postRepository.Search(q, sortDesc));
         }
 
         [HttpGet("hottest")]

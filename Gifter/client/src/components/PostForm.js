@@ -15,13 +15,7 @@ export const PostForm = (props) => {
     const userProfileId = useRef(null)
 
     const constructNewPost = () => {
-        /*
-            The `location` and `animal` variables below are
-            the references attached to the input fields. You
-            can't just ask for the `.value` property directly,
-            but rather `.current.value` now in React.
-        */
-        //Title, Caption, DateCreated, ImageUrl, UserProfileId
+
         addPost({
             title: title.current.value,
             caption: caption.current.value,
@@ -29,7 +23,6 @@ export const PostForm = (props) => {
             imageUrl: imageUrl.current.value,
             userProfileId: 2
         })
-        //.then(() => props.history.push("/"))
     }
 
     return (
