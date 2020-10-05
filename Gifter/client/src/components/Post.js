@@ -11,10 +11,28 @@ const Post = ({ post }) => {
                     <strong>{post.title}</strong>
                 </p>
                 <p>{post.caption}</p>
-
                 {post.comments.map((comment) => (
-                    <p>{comment.message}</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    by: {comment.userProfile.name}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    comment: {comment.message}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
                 ))}
+
+
 
             </CardBody>
         </Card>
