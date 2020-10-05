@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardImg, CardBody } from "reactstrap";
+import { Card, CardImg, CardBody, table } from "reactstrap";
 
 const Post = ({ post }) => {
     return (
@@ -12,7 +12,7 @@ const Post = ({ post }) => {
                 </p>
                 <p>{post.caption}</p>
                 {post.comments.map((comment) => (
-                    <table>
+                    <table className="table">
                         <thead>
                             <tr>
                                 <th>
