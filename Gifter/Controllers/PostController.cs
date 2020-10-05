@@ -55,6 +55,11 @@ namespace Gifter.Controllers
         {
             return Ok(_postRepository.Search(q, sortDesc));
         }
+        [HttpGet("SearchWithComments")]
+        public IActionResult SearchWithComments(string q, bool sortDesc)
+        {
+            return Ok(_postRepository.SearchWithComments(q, sortDesc));
+        }
 
         [HttpGet("hottest")]
         public IActionResult Hottest(DateTime date)
